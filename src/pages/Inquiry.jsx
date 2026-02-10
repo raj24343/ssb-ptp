@@ -330,9 +330,9 @@ export default function Inquiry() {
                     <Mail className="w-5 h-5 text-[var(--brand)]" />
                     enquiry@sanskrithibschool.com
                   </a>
-                  <a href="tel:+919100974516" className="flex items-center gap-3 hover:text-[var(--brand)] transition-colors">
+                  <a href="tel:+919100064545" className="flex items-center gap-3 hover:text-[var(--brand)] transition-colors">
                     <Phone className="w-5 h-5 text-[var(--brand)]" />
-                    +91 9100974516
+                    +91 9100064545
                   </a>
                 </div>
               </div>
