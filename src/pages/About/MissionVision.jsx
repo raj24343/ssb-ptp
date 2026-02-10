@@ -98,7 +98,7 @@ export default function MissionVision() {
   ];
 
   return (
-    <div className="main-content">
+    <div className="main-content min-w-0 overflow-x-hidden">
       <div className="section-spacing">
         <div className="container">
           <SectionHeader
@@ -146,7 +146,7 @@ export default function MissionVision() {
               <h3 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '2rem', fontSize: '1.6em' }}>
                 Vision Pillars
               </h3>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" style={{ minWidth: 0 }}>
                 {visionPillars.map((pillar, index) => (
                   <div key={index} style={{
                     background: 'var(--glass-bg)',
@@ -207,7 +207,7 @@ export default function MissionVision() {
               <h3 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '2rem', fontSize: '1.6em' }}>
                 Mission Components
               </h3>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" style={{ minWidth: 0 }}>
                 {missionComponents.map((component, index) => (
                   <div key={index} style={{
                     background: 'var(--glass-bg)',
@@ -242,7 +242,7 @@ export default function MissionVision() {
                 </p>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" style={{ minWidth: 0 }}>
                 {coreValues.map((value, index) => (
                   <div key={index} style={{
                     background: 'var(--glass-bg)',
