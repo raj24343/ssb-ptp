@@ -27,7 +27,7 @@ export default function EkBharatSreshthaBharat() {
 
             <div className="panel">
               <h2>Program Objectives</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>Cultural Integration</h3>
                   <p>Promote the spirit of national integration through a deep and structured engagement between all States and Union Territories.</p>
@@ -49,11 +49,11 @@ export default function EkBharatSreshthaBharat() {
 
             <div className="panel">
               <h2>State Pairing</h2>
-              <div className="bg-gradient p-6 rounded-lg text-white text-center">
+              <div className="bg-gradient p-4 sm:p-6 rounded-lg text-white text-center">
                 <h3 className="text-xl font-bold mb-2">Andhra Pradesh ↔ Himachal Pradesh</h3>
                 <p>Our institution actively promotes cultural exchange between these paired states</p>
               </div>
-              <div className="mt-6 grid md:grid-cols-2 gap-6">
+              <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h4>Andhra Pradesh Heritage</h4>
                   <p>Rich cultural traditions, classical dance forms like Kuchipudi, historical monuments, and renowned cuisine.</p>
@@ -68,27 +68,27 @@ export default function EkBharatSreshthaBharat() {
             <div className="panel">
               <h2>Key Activities & Programs</h2>
               <div className="space-y-4">
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Cultural Exchange Programs</h4>
                   <p>Student and faculty exchange visits between institutions in paired states to experience local culture and traditions.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Language Learning Initiative</h4>
                   <p>Hindi and regional language learning programs, with special focus on languages of paired states.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Cultural Festivals</h4>
                   <p>Celebration of major festivals of both states including Ugadi, Diwali, regional harvest festivals, and mountain festivals.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Food Festivals</h4>
                   <p>Culinary exchanges featuring traditional dishes from Andhra Pradesh and Himachal Pradesh to promote cultural appreciation.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Art & Craft Workshops</h4>
                   <p>Hands-on workshops on traditional crafts, painting styles, and artistic expressions from both states.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Sports & Games</h4>
                   <p>Traditional sports competitions including Kabaddi, regional games, and adventure sports popular in mountain regions.</p>
                 </div>
@@ -97,7 +97,7 @@ export default function EkBharatSreshthaBharat() {
 
             <div className="panel">
               <h2>Annual Cultural Events</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>EBSB Cultural Week</h3>
                   <p>Week-long celebration featuring dance, music, drama, and cultural performances representing diverse Indian traditions.</p>
@@ -120,19 +120,19 @@ export default function EkBharatSreshthaBharat() {
             <div className="panel">
               <h2>Student Participation</h2>
               <div className="space-y-4">
-                <div className="border-l-4 border-orange-500 pl-4">
+                <div className="border-l-4 border-orange-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Student Exchange Program</h4>
                   <p>Semester-long exchange opportunities with partner institutions in Himachal Pradesh for cultural immersion.</p>
                 </div>
-                <div className="border-l-4 border-orange-500 pl-4">
+                <div className="border-l-4 border-orange-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Cultural Ambassador Program</h4>
                   <p>Selected students act as cultural ambassadors, promoting understanding between paired states.</p>
                 </div>
-                <div className="border-l-4 border-orange-500 pl-4">
+                <div className="border-l-4 border-orange-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Heritage Documentation</h4>
                   <p>Students document and preserve cultural heritage through photography, videos, and digital archives.</p>
                 </div>
-                <div className="border-l-4 border-orange-500 pl-4">
+                <div className="border-l-4 border-orange-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Community Outreach</h4>
                   <p>Extension of EBSB activities to local schools and communities to spread awareness about national integration.</p>
                 </div>
@@ -141,7 +141,7 @@ export default function EkBharatSreshthaBharat() {
 
             <div className="panel">
               <h2>Impact & Achievements</h2>
-              <div className="grid md:grid-cols-4 gap-6 mb-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mb-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[var(--brand)] mb-2">500+</div>
                   <p className="text-sm">Students Participated</p>

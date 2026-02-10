@@ -25,8 +25,8 @@ export default function NSS() {
 
             <div className="panel">
               <h2>NSS Motto & Symbol</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="text-center bg-gradient p-6 rounded-lg text-white">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="text-center bg-gradient p-4 sm:p-6 rounded-lg text-white">
                   <h3 className="text-xl font-bold">"Not Me But You"</h3>
                   <p className="mt-2">मैं नहीं तू</p>
                 </div>
@@ -39,7 +39,7 @@ export default function NSS() {
 
             <div className="panel">
               <h2>Core Activities</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>Village Adoption</h3>
                   <p>Long-term engagement with rural communities to address their developmental needs and challenges.</p>
@@ -70,19 +70,19 @@ export default function NSS() {
             <div className="panel">
               <h2>Special Camps & Programs</h2>
               <div className="space-y-4">
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Annual Special Camps</h4>
                   <p>7-day residential camps in adopted villages focusing on community development activities.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">National Youth Day</h4>
                   <p>Special programs on January 12th celebrating Swami Vivekananda's birthday and youth empowerment.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Swachh Bharat Abhiyaan</h4>
                   <p>Regular cleanliness drives and sanitation awareness programs in campus and local communities.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Digital Literacy</h4>
                   <p>Computer literacy programs for rural populations and senior citizens.</p>
                 </div>
@@ -91,7 +91,7 @@ export default function NSS() {
 
             <div className="panel">
               <h2>Impact & Statistics</h2>
-              <div className="grid md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[var(--brand)] mb-2">200+</div>
                   <p className="text-sm">Active Volunteers</p>

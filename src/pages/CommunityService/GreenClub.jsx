@@ -25,7 +25,7 @@ export default function GreenClub() {
 
             <div className="panel">
               <h2>Our Mission</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>Environmental Education</h3>
                   <p>Creating awareness about environmental issues and sustainable living practices through workshops and seminars.</p>
@@ -48,23 +48,23 @@ export default function GreenClub() {
             <div className="panel">
               <h2>Key Initiatives</h2>
               <div className="space-y-4">
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-green-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Tree Plantation Drives</h4>
                   <p>Regular tree planting activities across campus and local areas, with focus on native species and medicinal plants.</p>
                 </div>
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-green-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Waste Management</h4>
                   <p>Comprehensive waste segregation, composting, and recycling programs to achieve zero-waste campus goals.</p>
                 </div>
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-green-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Water Conservation</h4>
                   <p>Rainwater harvesting systems, water quality testing, and awareness programs on water conservation.</p>
                 </div>
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-green-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Renewable Energy</h4>
                   <p>Promoting solar energy usage, energy-efficient practices, and carbon footprint reduction initiatives.</p>
                 </div>
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-green-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Organic Farming</h4>
                   <p>Establishing organic gardens and teaching sustainable farming practices to students and local farmers.</p>
                 </div>
@@ -73,7 +73,7 @@ export default function GreenClub() {
 
             <div className="panel">
               <h2>Special Events & Campaigns</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>World Environment Day</h3>
                   <p>Annual celebrations with tree plantation, environmental quiz competitions, and green awareness rallies.</p>
@@ -95,7 +95,7 @@ export default function GreenClub() {
 
             <div className="panel">
               <h2>Environmental Impact</h2>
-              <div className="grid md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-600 mb-2">2000+</div>
                   <p className="text-sm">Trees Planted</p>

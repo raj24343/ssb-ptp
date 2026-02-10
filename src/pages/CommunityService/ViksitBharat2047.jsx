@@ -26,12 +26,12 @@ export default function ViksitBharat2047() {
 
             <div className="panel">
               <h2>Vision 2047</h2>
-              <div className="text-center bg-gradient p-8 rounded-lg text-white mb-6">
-                <h3 className="text-2xl font-bold mb-4">Our Commitment to Viksit Bharat</h3>
-                <p className="text-lg">Contributing to India's journey towards becoming a developed nation through education, innovation, and sustainable practices</p>
+              <div className="text-center bg-gradient p-4 sm:p-6 md:p-8 rounded-lg text-white mb-4 sm:mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Our Commitment to Viksit Bharat</h3>
+                <p className="text-base sm:text-lg">Contributing to India's journey towards becoming a developed nation through education, innovation, and sustainable practices</p>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>Economic Development</h3>
                   <p>Contributing to India's goal of becoming a $30 trillion economy through innovation, entrepreneurship, and skilled workforce development.</p>
@@ -54,27 +54,27 @@ export default function ViksitBharat2047() {
             <div className="panel">
               <h2>Key Focus Areas</h2>
               <div className="space-y-4">
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Digital India & Technology</h4>
                   <p>Advancing digital infrastructure, artificial intelligence, blockchain, and emerging technologies for national development.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Innovation & Entrepreneurship</h4>
                   <p>Fostering startup ecosystem, research & development, and innovation in science and technology sectors.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Skill Development</h4>
                   <p>Building future-ready workforce through advanced skill training, vocational education, and industry-academia collaboration.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Sustainable Manufacturing</h4>
                   <p>Promoting clean manufacturing, Industry 4.0 technologies, and sustainable production practices.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Clean Energy Transition</h4>
                   <p>Leading India's renewable energy revolution through solar, wind, and other clean energy technologies.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Rural Development</h4>
                   <p>Bridging urban-rural divide through technology adoption, infrastructure development, and capacity building.</p>
                 </div>
@@ -83,7 +83,7 @@ export default function ViksitBharat2047() {
 
             <div className="panel">
               <h2>Our Contributions</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>Research & Innovation</h3>
                   <p>Cutting-edge research in emerging technologies, sustainable solutions, and indigenous innovations for national development.</p>
@@ -106,19 +106,19 @@ export default function ViksitBharat2047() {
             <div className="panel">
               <h2>Student Initiatives</h2>
               <div className="space-y-4">
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-green-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Innovation Challenges</h4>
                   <p>Annual competitions for developing solutions to national challenges in areas like clean energy, smart cities, and digital governance.</p>
                 </div>
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-green-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Technology for Good Projects</h4>
                   <p>Student projects focused on using technology to solve social problems and contribute to national development goals.</p>
                 </div>
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-green-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Skill India Programs</h4>
                   <p>Training programs aligned with Skill India mission to prepare students for future job markets and industries.</p>
                 </div>
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-4 border-green-500 pl-3 sm:pl-4">
                   <h4 className="font-semibold">Make in India Initiatives</h4>
                   <p>Projects promoting indigenous manufacturing, local production, and supporting the Make in India campaign.</p>
                 </div>
@@ -127,7 +127,7 @@ export default function ViksitBharat2047() {
 
             <div className="panel">
               <h2>Technology Development Areas</h2>
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 <div className="card text-center">
                   <h4>Artificial Intelligence</h4>
                   <p className="text-sm">AI research and applications for various sectors</p>
@@ -157,7 +157,7 @@ export default function ViksitBharat2047() {
 
             <div className="panel">
               <h2>Progress Indicators</h2>
-              <div className="grid md:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[var(--brand)] mb-2">50+</div>
                   <p className="text-sm">Innovation Projects</p>
@@ -190,7 +190,7 @@ export default function ViksitBharat2047() {
 
             <div className="panel">
               <h2>Future Roadmap</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>2025 Goals</h3>
                   <ul className="text-sm space-y-1">

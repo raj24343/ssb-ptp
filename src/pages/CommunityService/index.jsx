@@ -11,11 +11,11 @@ const programSections = [
     content: (
       <>
         <p className="mb-4">The National Service Scheme (NSS) is a Central Sector Scheme of Government of India. At SSB Puttaparthi, our NSS unit actively engages in community development and social service.</p>
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
           <div className="card"><h4 className="font-semibold mb-2">Core Activities</h4><p className="text-sm">Village Adoption, Literacy Programs, Health Awareness, Environmental Conservation, Blood Donation, Disaster Management</p></div>
           <div className="card"><h4 className="font-semibold mb-2">Special Programs</h4><p className="text-sm">Annual Special Camps, National Youth Day, Swachh Bharat Abhiyaan, Digital Literacy</p></div>
         </div>
-        <div className="flex gap-6 flex-wrap text-sm">
+        <div className="flex gap-4 sm:gap-6 flex-wrap text-sm">
           <span><strong className="text-[var(--brand)]">200+</strong> Active Volunteers</span>
           <span><strong className="text-[var(--brand)]">5</strong> Adopted Villages</span>
           <span><strong className="text-[var(--brand)]">5000+</strong> Lives Impacted</span>
@@ -31,11 +31,11 @@ const programSections = [
     content: (
       <>
         <p className="mb-4">The NCC aims to develop character, comradeship, discipline, and ideals of selfless service among young citizens. Our NCC unit promotes these values through various training programs.</p>
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
           <div className="card"><h4 className="font-semibold mb-2">Training</h4><p className="text-sm">Drill and Discipline, Map Reading & Navigation, First Aid, Adventure Sports</p></div>
           <div className="card"><h4 className="font-semibold mb-2">Activities</h4><p className="text-sm">Annual Training Camps, Republic Day & Independence Day Parades, Community Service, Leadership Development</p></div>
         </div>
-        <div className="flex gap-6 flex-wrap text-sm">
+        <div className="flex gap-4 sm:gap-6 flex-wrap text-sm">
           <span><strong className="text-[var(--brand)]">150+</strong> Active Cadets</span>
           <span><strong className="text-[var(--brand)]">25+</strong> Certified Officers</span>
         </div>
@@ -50,11 +50,11 @@ const programSections = [
     content: (
       <>
         <p className="mb-4">The Green Club is dedicated to creating environmental awareness and promoting sustainable practices among students and the local community.</p>
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
           <div className="card"><h4 className="font-semibold mb-2">Mission</h4><p className="text-sm">Environmental Education, Conservation Projects, Green Campus, Community Outreach</p></div>
           <div className="card"><h4 className="font-semibold mb-2">Initiatives</h4><p className="text-sm">Tree Plantation, Waste Management, Water Conservation, Renewable Energy, Organic Farming</p></div>
         </div>
-        <div className="flex gap-6 flex-wrap text-sm">
+        <div className="flex gap-4 sm:gap-6 flex-wrap text-sm">
           <span><strong className="text-green-600">2000+</strong> Trees Planted</span>
           <span><strong className="text-green-600">80%</strong> Waste Recycled</span>
           <span><strong className="text-green-600">100+</strong> Active Members</span>
@@ -70,11 +70,11 @@ const programSections = [
     content: (
       <>
         <p className="mb-4">UBA is a flagship program of the Ministry of Education aiming to leverage knowledge and resources for sustainable development in rural communities.</p>
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
           <div className="card"><h4 className="font-semibold mb-2">Adopted Villages</h4><p className="text-sm">Bukkapatnam, Kothacheruvu, Kalyanadurgam, Mudigubba, Chintalapalli</p></div>
           <div className="card"><h4 className="font-semibold mb-2">Key Interventions</h4><p className="text-sm">Agricultural Technology, Water Management, Digital Literacy, Health & Hygiene, Skill Development</p></div>
         </div>
-        <div className="flex gap-6 flex-wrap text-sm">
+        <div className="flex gap-4 sm:gap-6 flex-wrap text-sm">
           <span><strong className="text-[var(--brand)]">5</strong> Adopted Villages</span>
           <span><strong className="text-[var(--brand)]">12,000+</strong> Beneficiaries</span>
           <span><strong className="text-[var(--brand)]">150+</strong> Student Volunteers</span>
@@ -90,7 +90,7 @@ const programSections = [
     content: (
       <>
         <p className="mb-4">EBSB aims to enhance interaction between people of diverse cultures across States and UTs, promoting greater mutual understanding.</p>
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
           <div className="card"><h4 className="font-semibold mb-2">State Pairing</h4><p className="text-sm">Andhra Pradesh ↔ Himachal Pradesh — Cultural exchange between paired states</p></div>
           <div className="card"><h4 className="font-semibold mb-2">Activities</h4><p className="text-sm">Cultural Exchange Programs, Language Learning Initiative, Cultural Festivals, Youth Engagement</p></div>
         </div>
@@ -105,7 +105,7 @@ const programSections = [
     content: (
       <>
         <p className="mb-4">Viksit Bharat @2047 aims to transform India into a fully developed nation by 2047, the 100th year of India&apos;s independence.</p>
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
           <div className="card"><h4 className="font-semibold mb-2">Focus Areas</h4><p className="text-sm">Economic Development, Technological Advancement, Social Progress, Environmental Sustainability</p></div>
           <div className="card"><h4 className="font-semibold mb-2">Key Initiatives</h4><p className="text-sm">Digital India & Technology, Innovation & Entrepreneurship, Skill Development, Clean Energy, Rural Development</p></div>
         </div>
@@ -119,12 +119,12 @@ function ProgramAccordionItem({ item, isOpen, onToggle }) {
     <div className="panel overflow-hidden">
       <button
         onClick={() => onToggle(item.id)}
-        className="w-full flex items-center justify-between text-left py-2"
+        className="w-full flex items-center justify-between text-left py-3 sm:py-2 min-h-[44px]"
       >
-        <div>
-          <h3 className="text-lg font-semibold text-[var(--text)]">{item.title}</h3>
+        <div className="min-w-0 flex-1 pr-2">
+          <h3 className="text-base sm:text-lg font-semibold text-[var(--text)]">{item.title}</h3>
           <p className="text-sm text-[var(--brand)] mt-0.5">{item.subtitle}</p>
-          <p className="text-xs text-[var(--text-muted)] mt-1">{item.desc}</p>
+          <p className="text-xs text-[var(--text-muted)] mt-1 line-clamp-2 sm:line-clamp-none">{item.desc}</p>
         </div>
         {isOpen ? <ChevronUp className="w-5 h-5 text-[var(--brand)]" /> : <ChevronDown className="w-5 h-5 text-[var(--text-muted)]" />}
       </button>
@@ -166,7 +166,7 @@ export default function CommunityService() {
 
             <div className="panel">
               <h2>Student Involvement</h2>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[var(--brand)] mb-2">100%</div>
                   <p className="text-sm">Student Participation</p>

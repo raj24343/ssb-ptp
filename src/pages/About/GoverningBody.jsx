@@ -63,12 +63,11 @@ const examCommittee = [
 
 // --- Sub-Components ---
 const MemberCard = ({ member }) => (
-  <div style={{
+  <div className="p-3 sm:p-4 md:p-5" style={{
     background: 'var(--glass-bg, rgba(255, 255, 255, 0.7))',
     backdropFilter: 'var(--glass-backdrop, blur(10px))',
     border: '1px solid var(--border-light, rgba(255, 255, 255, 0.3))',
     borderRadius: '12px',
-    padding: '1.5rem',
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
@@ -89,21 +88,16 @@ const MemberCard = ({ member }) => (
 );
 
 const CommitteeSection = ({ title, data }) => (
-  <div style={{ marginBottom: '4rem' }}>
+  <div className="mb-12 sm:mb-16">
     <h2 style={{ 
-      fontSize: '1.75rem', 
       marginBottom: '2rem', 
       paddingLeft: '1rem', 
       borderLeft: '4px solid var(--brand, #007bff)',
       color: 'var(--text, #111)'
-    }}>
+    }} className="text-lg sm:text-xl md:text-2xl">
       {title}
     </h2>
-    <div style={{ 
-      display: 'grid', 
-      gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
-      gap: '1.5rem' 
-    }}>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
       {data.map((m, idx) => <MemberCard key={idx} member={m} />)}
     </div>
   </div>
@@ -114,7 +108,6 @@ export default function GoverningBody() {
     background: 'var(--glass-bg, rgba(255, 255, 255, 0.6))',
     backdropFilter: 'var(--glass-backdrop, blur(12px))',
     border: '1px solid var(--border-light, rgba(255, 255, 255, 0.3))',
-    padding: '2.5rem',
     borderRadius: '20px',
     boxShadow: 'var(--shadow-medium, 0 10px 15px rgba(0, 0, 0, 0.05))'
   };
@@ -130,13 +123,8 @@ export default function GoverningBody() {
           />
 
           {/* Dean's Message (Transparent/Glass) */}
-          <div className="panel" style={{ ...transparentPanelStyle, marginBottom: '5rem' }}>
-  <div style={{ 
-    display: 'grid', 
-    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-    gap: '3rem', 
-    alignItems: 'center' 
-  }}>
+          <div className="panel p-4 sm:p-6 md:p-8 mb-12 sm:mb-20" style={transparentPanelStyle}>
+  <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-6 lg:gap-12 items-center">
     {/* Left Column: Photo & Credentials */}
     <div style={{ 
       display: 'flex', 
@@ -154,13 +142,7 @@ export default function GoverningBody() {
         <img
           src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop"
           alt="Dr. M. Balakoteswari"
-          style={{
-            width: '240px',
-            height: '240px',
-            borderRadius: '8px',
-            objectFit: 'cover',
-            display: 'block'
-          }}
+          className="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-lg object-cover block"
         />
       </div>
       
@@ -188,21 +170,14 @@ export default function GoverningBody() {
 
     {/* Right Column: Message */}
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-      <h2 style={{ 
-        fontSize: '2.2rem', 
-        marginBottom: '1.5rem', 
-        color: 'var(--text, #111)',
-        fontWeight: '800'
-      }}>
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-4 md:mb-6" style={{ color: 'var(--text, #111)' }}>
         Dean's Message
       </h2>
-      <blockquote style={{
-        fontSize: '1.15rem',
+      <blockquote className="text-base sm:text-lg pl-3 sm:pl-6" style={{
         lineHeight: '1.8',
         fontStyle: 'italic',
         color: 'var(--text, #333)',
         margin: '0 0 1.5rem 0',
-        paddingLeft: '1.5rem',
         borderLeft: '4px solid var(--brand, #007bff)'
       }}>
         "At SSB Puttaparthi, we believe that academic excellence is achieved through a perfect blend of rigorous curriculum, experienced faculty, and practical learning experiences. Our commitment is to nurture students who are not only academically sound but also industry-ready."
@@ -220,23 +195,20 @@ export default function GoverningBody() {
           <CommitteeSection title="Examination Committee" data={examCommittee} />
 
           {/* Governance Structure (Transparent/Glass) */}
-          <div className="panel" style={{ ...transparentPanelStyle, marginTop: '4rem' }}>
+          <div className="panel p-4 sm:p-6 md:p-8 mt-8 sm:mt-12 md:mt-16" style={transparentPanelStyle}>
             <h2 style={{ textAlign: 'center', marginBottom: '3rem', color: 'var(--text, #111)' }}>Governance Structure</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {[
                 { icon: "🏛️", title: "Strategic Oversight" },
                 { icon: "📚", title: "Academic Excellence" },
                 { icon: "💼", title: "Financial Stewardship" },
                 { icon: "🎯", title: "Policy & Compliance" }
               ].map((item, idx) => (
-                <div key={idx} style={{ 
-                  textAlign: 'center', 
-                  padding: '2rem', 
+                <div key={idx} className="text-center p-4 sm:p-6 rounded-2xl" style={{ 
                   background: 'rgba(255, 255, 255, 0.3)', 
-                  borderRadius: '16px', 
                   border: '1px solid rgba(255, 255, 255, 0.2)' 
                 }}>
-                  <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{item.icon}</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl mb-4">{item.icon}</div>
                   <h4 style={{ margin: 0, color: 'var(--text, #111)' }}>{item.title}</h4>
                 </div>
               ))}

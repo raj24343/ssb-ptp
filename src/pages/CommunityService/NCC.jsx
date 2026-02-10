@@ -25,7 +25,7 @@ export default function NCC() {
 
             <div className="panel">
               <h2>NCC Motto</h2>
-              <div className="text-center bg-gradient p-6 rounded-lg text-white">
+              <div className="text-center bg-gradient p-4 sm:p-6 rounded-lg text-white">
                 <h3 className="text-xl font-bold">"Unity and Discipline"</h3>
                 <p className="mt-2">एकता और अनुशासन</p>
               </div>
@@ -33,7 +33,7 @@ export default function NCC() {
 
             <div className="panel">
               <h2>Training Programs</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>Drill and Discipline</h3>
                   <p>Regular drill sessions to develop discipline, coordination, and team spirit among cadets.</p>
@@ -56,19 +56,19 @@ export default function NCC() {
             <div className="panel">
               <h2>Activities & Events</h2>
               <div className="space-y-4">
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Annual Training Camps</h4>
                   <p>Intensive training camps combining military exercises, social service, and character building activities.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Republic Day & Independence Day Parades</h4>
                   <p>Participation in national celebrations showcasing drill performances and patriotic spirit.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Community Service</h4>
                   <p>Blood donation drives, cleanliness campaigns, and disaster relief activities in local communities.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Leadership Development</h4>
                   <p>Special programs to develop leadership qualities and communication skills among cadets.</p>
                 </div>
@@ -77,7 +77,7 @@ export default function NCC() {
 
             <div className="panel">
               <h2>Achievements</h2>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[var(--brand)] mb-2">150+</div>
                   <p className="text-sm">Active Cadets</p>

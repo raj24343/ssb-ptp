@@ -26,7 +26,7 @@ export default function UnnatBharatAbhiyaan() {
 
             <div className="panel">
               <h2>Vision & Objectives</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>Rural Transformation</h3>
                   <p>Enable higher educational institutions to work with rural communities to address development challenges through appropriate technologies.</p>
@@ -49,7 +49,7 @@ export default function UnnatBharatAbhiyaan() {
             <div className="panel">
               <h2>Adopted Villages</h2>
               <p className="mb-4">Our institution has adopted 5 villages under the UBA program:</p>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 <div className="card">
                   <h4>Bukkapatnam</h4>
                   <p className="text-sm">Population: ~2,500</p>
@@ -81,27 +81,27 @@ export default function UnnatBharatAbhiyaan() {
             <div className="panel">
               <h2>Key Interventions</h2>
               <div className="space-y-4">
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Agricultural Technology</h4>
                   <p>Introduction of modern farming techniques, organic farming methods, and crop diversification strategies to improve agricultural productivity.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Water Management</h4>
                   <p>Implementation of rainwater harvesting systems, construction of check dams, and promotion of efficient irrigation methods.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Digital Literacy</h4>
                   <p>Computer training programs, digital payment awareness, and e-governance facility access for rural populations.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Health & Hygiene</h4>
                   <p>Health awareness campaigns, medical camps, sanitation improvement, and nutrition education programs.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Skill Development</h4>
                   <p>Vocational training programs in areas like tailoring, handicrafts, food processing, and small-scale entrepreneurship.</p>
                 </div>
-                <div className="border-l-4 border-[var(--brand)] pl-4">
+                <div className="border-l-4 border-[var(--brand)] pl-3 sm:pl-4">
                   <h4 className="font-semibold">Education Support</h4>
                   <p>Infrastructure improvement in schools, teacher training, student mentoring, and educational material distribution.</p>
                 </div>
@@ -110,7 +110,7 @@ export default function UnnatBharatAbhiyaan() {
 
             <div className="panel">
               <h2>Student Participation</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
                   <h3>Rural Immersion Program</h3>
                   <p>Students spend extended periods in adopted villages to understand rural challenges and develop practical solutions.</p>
@@ -132,7 +132,7 @@ export default function UnnatBharatAbhiyaan() {
 
             <div className="panel">
               <h2>Impact & Achievements</h2>
-              <div className="grid md:grid-cols-4 gap-6 mb-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mb-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-[var(--brand)] mb-2">5</div>
                   <p className="text-sm">Adopted Villages</p>

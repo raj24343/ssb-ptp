@@ -93,16 +93,13 @@ export default function AcademicCouncil() {
           <div className="space-y-section">
             {/* Introduction */}
             <div className="panel">
-              <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                <h2 style={{ color: 'var(--text)', fontSize: '2.2em', marginBottom: '2rem' }}>
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="text-xl sm:text-2xl md:text-3xl" style={{ color: 'var(--text)', marginBottom: '2rem' }}>
                   Academic Excellence & Governance
                 </h2>
-                <p style={{ 
+                <p className="text-base sm:text-lg max-w-3xl mx-auto px-2 sm:px-0" style={{ 
                   color: 'var(--text-soft)', 
-                  fontSize: '1.2em', 
-                  lineHeight: '1.7',
-                  maxWidth: '800px',
-                  margin: '0 auto'
+                  lineHeight: '1.7'
                 }}>
                   The Academic Council serves as the premier academic authority at SSB Puttaparthi, 
                   responsible for formulating academic policies, ensuring quality standards, and 
@@ -110,8 +107,8 @@ export default function AcademicCouncil() {
                 </p>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
-                <div style={{ textAlign: 'center', padding: '2rem', background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div className="text-center p-4 sm:p-6" style={{ background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>🏛️</div>
                   <h4 style={{ color: 'var(--brand)', marginBottom: '1rem' }}>Academic Governance</h4>
                   <p style={{ color: 'var(--text-soft)', lineHeight: '1.6' }}>
@@ -119,7 +116,7 @@ export default function AcademicCouncil() {
                   </p>
                 </div>
                 
-                <div style={{ textAlign: 'center', padding: '2rem', background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
+                <div className="text-center p-4 sm:p-6" style={{ background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>⚖️</div>
                   <h4 style={{ color: 'var(--brand)', marginBottom: '1rem' }}>Quality Assurance</h4>
                   <p style={{ color: 'var(--text-soft)', lineHeight: '1.6' }}>
@@ -127,7 +124,7 @@ export default function AcademicCouncil() {
                   </p>
                 </div>
                 
-                <div style={{ textAlign: 'center', padding: '2rem', background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
+                <div className="text-center p-4 sm:p-6" style={{ background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>🎯</div>
                   <h4 style={{ color: 'var(--brand)', marginBottom: '1rem' }}>Strategic Vision</h4>
                   <p style={{ color: 'var(--text-soft)', lineHeight: '1.6' }}>
@@ -139,27 +136,21 @@ export default function AcademicCouncil() {
 
             {/* Council Members */}
             <div className="panel">
-              <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '3rem' }}>
+              <h2 className="text-lg sm:text-xl md:text-2xl text-center mb-6 sm:mb-8 md:mb-12" style={{ color: 'var(--text)' }}>
                 Academic Council Members
               </h2>
               
-              <div style={{ 
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-                gap: '2rem' 
-              }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {councilMembers.map((member, index) => (
-                  <div key={index} style={{
+                  <div key={index} className="p-4 sm:p-6 text-center hover:transform hover:translate-y-[-4px] hover:shadow-[var(--shadow-medium)]" style={{
                     background: 'var(--glass-bg)',
                     backdropFilter: 'var(--glass-backdrop)',
                     border: '1px solid var(--border-light)',
                     borderRadius: 'var(--radius-lg)',
-                    padding: '2rem',
-                    textAlign: 'center',
                     transition: 'all var(--transition-medium)',
                     position: 'relative',
                     overflow: 'hidden'
-                  }} className="hover:transform hover:translate-y-[-4px] hover:shadow-[var(--shadow-medium)]">
+                  }}>
                     
                     <div style={{
                       position: 'absolute',
@@ -174,17 +165,7 @@ export default function AcademicCouncil() {
                     <img 
                       src={member.image}
                       alt={member.name}
-                      style={{
-                        width: '120px',
-                        height: '120px',
-                        objectFit: 'cover',
-                        borderRadius: '50%',
-                        margin: '0 auto 1.5rem',
-                        border: '3px solid var(--brand)',
-                        display: 'block',
-                        position: 'relative',
-                        zIndex: 1
-                      }}
+                      className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-cover rounded-full mx-auto mb-4 md:mb-6 block relative z-[1] border-[3px] border-[var(--brand)]"
                     />
                     
                     <h3 style={{ 
@@ -243,21 +224,19 @@ export default function AcademicCouncil() {
 
             {/* Responsibilities */}
             <div className="panel">
-              <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '3rem' }}>
+              <h2 className="text-lg sm:text-xl md:text-2xl text-center mb-6 sm:mb-8 md:mb-12" style={{ color: 'var(--text)' }}>
                 Key Responsibilities
               </h2>
               
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {responsibilities.map((responsibility, index) => (
-                  <div key={index} style={{
+                  <div key={index} className="p-4 sm:p-6 text-center hover:transform hover:translate-y-[-2px] hover:shadow-[var(--shadow-soft)]" style={{
                     background: 'var(--glass-bg)',
                     backdropFilter: 'var(--glass-backdrop)',
                     border: '1px solid var(--border-light)',
                     borderRadius: 'var(--radius-lg)',
-                    padding: '2rem',
-                    textAlign: 'center',
                     transition: 'all var(--transition-medium)'
-                  }} className="hover:transform hover:translate-y-[-2px] hover:shadow-[var(--shadow-soft)]">
+                  }}>
                     
                     <div style={{ fontSize: '3.5em', marginBottom: '1rem' }}>
                       {responsibility.icon}
@@ -283,17 +262,16 @@ export default function AcademicCouncil() {
               background: 'linear-gradient(135deg, var(--surface-1) 0%, var(--surface-2) 100%)',
               border: '1px solid var(--border-light)'
             }}>
-              <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '3rem' }}>
+              <h2 className="text-lg sm:text-xl md:text-2xl text-center mb-6 sm:mb-8 md:mb-12" style={{ color: 'var(--text)' }}>
                 Council Operations
               </h2>
               
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-                <div style={{
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div className="p-4 sm:p-6" style={{
                   background: 'var(--glass-bg)',
                   backdropFilter: 'var(--glass-backdrop)',
                   border: '1px solid var(--border-light)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '2rem'
+                  borderRadius: 'var(--radius-lg)'
                 }}>
                   <div style={{ fontSize: '2.5em', textAlign: 'center', marginBottom: '1rem' }}>📅</div>
                   <h4 style={{ color: 'var(--brand)', fontSize: '1.2em', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>
@@ -307,12 +285,11 @@ export default function AcademicCouncil() {
                   </ul>
                 </div>
                 
-                <div style={{
+                <div className="p-4 sm:p-6" style={{
                   background: 'var(--glass-bg)',
                   backdropFilter: 'var(--glass-backdrop)',
                   border: '1px solid var(--border-light)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '2rem'
+                  borderRadius: 'var(--radius-lg)'
                 }}>
                   <div style={{ fontSize: '2.5em', textAlign: 'center', marginBottom: '1rem' }}>📋</div>
                   <h4 style={{ color: 'var(--brand)', fontSize: '1.2em', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>
@@ -326,12 +303,11 @@ export default function AcademicCouncil() {
                   </ul>
                 </div>
                 
-                <div style={{
+                <div className="p-4 sm:p-6" style={{
                   background: 'var(--glass-bg)',
                   backdropFilter: 'var(--glass-backdrop)',
                   border: '1px solid var(--border-light)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '2rem'
+                  borderRadius: 'var(--radius-lg)'
                 }}>
                   <div style={{ fontSize: '2.5em', textAlign: 'center', marginBottom: '1rem' }}>🎯</div>
                   <h4 style={{ color: 'var(--brand)', fontSize: '1.2em', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>

@@ -188,12 +188,12 @@ export default function Courses() {
           <div className="space-y-section">
             {/* Program Selection */}
             <Card>
-              <div className="text-center mb-10">
-                <h2 className="text-2xl font-bold text-[var(--text)] mb-6">Choose Your Program</h2>
-                <div className="flex flex-wrap justify-center gap-4">
+              <div className="text-center mb-8 sm:mb-10">
+                <h2 className="text-xl sm:text-2xl font-bold text-[var(--text)] mb-4 sm:mb-6">Choose Your Program</h2>
+                <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
                   <button
                     onClick={() => setSelectedProgram('bba')}
-                    className={`px-6 py-3 rounded-xl font-semibold transition-all ${
+                    className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-sm sm:text-base transition-all ${
                       selectedProgram === 'bba'
                         ? 'bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white shadow-lg'
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
@@ -203,7 +203,7 @@ export default function Courses() {
                   </button>
                   <button
                     onClick={() => setSelectedProgram('mba')}
-                    className={`px-6 py-3 rounded-xl font-semibold transition-all ${
+                    className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-sm sm:text-base transition-all ${
                       selectedProgram === 'mba'
                         ? 'bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white shadow-lg'
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
@@ -213,7 +213,7 @@ export default function Courses() {
                   </button>
                   <button
                     onClick={() => setSelectedProgram('pgdm')}
-                    className={`px-6 py-3 rounded-xl font-semibold transition-all ${
+                    className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-sm sm:text-base transition-all ${
                       selectedProgram === 'pgdm'
                         ? 'bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white shadow-lg'
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
@@ -228,13 +228,13 @@ export default function Courses() {
             {/* Program Overview */}
             <Card>
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-[var(--text)] mb-4 flex items-center gap-4">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[var(--text)] mb-4 flex flex-wrap items-center gap-3 sm:gap-4">
                   <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
                     <span className="text-2xl">🎓</span>
                   </div>
                   {programs[selectedProgram].title}
                 </h2>
-                <div className={`grid gap-6 mb-6 ${programs[selectedProgram].specializations ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
+                <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 ${programs[selectedProgram].specializations ? 'lg:grid-cols-3' : ''}`}>
                   <div className="text-center p-4 rounded-lg bg-[var(--surface-1)] border border-[var(--border-light)]">
                     <h4 className="font-semibold text-[var(--text)] mb-2">Duration</h4>
                     <p className="text-[var(--text-soft)]">{programs[selectedProgram].duration}</p>
@@ -250,7 +250,7 @@ export default function Courses() {
                     </div>
                   )}
                 </div>
-                <p className="text-[var(--text-soft)] text-lg leading-relaxed">{programs[selectedProgram].description}</p>
+                <p className="text-[var(--text-soft)] text-base sm:text-lg leading-relaxed">{programs[selectedProgram].description}</p>
               </div>
             </Card>
 
@@ -263,9 +263,9 @@ export default function Courses() {
                 </div>
                 Specialization Areas
               </h2>
-              <div className="grid lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                 {programs[selectedProgram].specializations.map((spec, i) => (
-                  <div key={i} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
+                  <div key={i} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
                     <div className="flex items-start gap-4 mb-4">
                       <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
                         <span className="text-2xl">{spec.icon}</span>
@@ -277,7 +277,7 @@ export default function Courses() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[var(--text)] mb-3">Career Opportunities</h4>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {spec.careerOptions.map((career, j) => (
                           <span key={j} className="text-sm px-3 py-1 rounded-full bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] text-[var(--text-soft)]">
                             {career}
@@ -300,9 +300,9 @@ export default function Courses() {
                 </div>
                 Curriculum Structure
               </h2>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                 {Object.entries(programs[selectedProgram].curriculum).map(([period, subjects]) => (
-                  <div key={period} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
+                  <div key={period} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
                     <h3 className="text-lg font-semibold text-[var(--text)] mb-4">{period}</h3>
                     <ul className="space-y-3">
                       {subjects.map((subject, i) => (
@@ -328,8 +328,8 @@ export default function Courses() {
                 </div>
                 Admission Requirements
               </h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+                <div className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
                   <h3 className="text-lg font-semibold text-[var(--text)] mb-4">Eligibility Criteria</h3>
                   <ul className="space-y-3">
                     {admissionRequirements[selectedProgram].map((req, i) => (
@@ -342,7 +342,7 @@ export default function Courses() {
                     ))}
                   </ul>
                 </div>
-                <div className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
+                <div className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
                   <h3 className="text-lg font-semibold text-[var(--text)] mb-4">Application Process</h3>
                   <div className="space-y-4">
                     {[
@@ -373,9 +373,9 @@ export default function Courses() {
                 </div>
                 Industry Partnerships
               </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
                 {industryConnections.map((partner, i) => (
-                  <div key={i} className="text-center p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
+                  <div key={i} className="text-center p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
                     <div className="w-16 h-16 rounded-full bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center mx-auto mb-4">
                       <span className="text-3xl">{partner.logo}</span>
                     </div>
@@ -388,7 +388,7 @@ export default function Courses() {
 
             {/* Call to Action */}
             <Card className="text-center bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)]">
-              <h2 className="text-3xl font-bold text-[var(--text)] mb-4">Ready to Begin Your Journey?</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[var(--text)] mb-4">Ready to Begin Your Journey?</h2>
               <p className="text-[var(--text-soft)] mb-8 text-lg">
                 Join our comprehensive management programs and build the skills needed for tomorrow's business challenges.
               </p>
