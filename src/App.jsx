@@ -27,7 +27,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
-      <main className="flex-1">
+      <main className="flex-1 min-w-0 overflow-x-hidden">
         <Suspense fallback={
           <div className="flex items-center justify-center min-h-[50vh] p-16">
             <div className="text-center">

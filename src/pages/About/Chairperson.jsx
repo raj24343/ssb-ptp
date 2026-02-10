@@ -18,28 +18,18 @@ export default function AboutChairperson() {
               background: 'linear-gradient(135deg, var(--surface-1) 0%, var(--surface-2) 100%)',
               border: '1px solid var(--border-light)'
             }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '350px 1fr', gap: '4rem', alignItems: 'start' }}>
-                <div style={{ textAlign: 'center', position: 'sticky', top: '2rem' }}>
+              <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[350px_1fr] gap-6 md:gap-8 lg:gap-16 items-start">
+                <div className="text-center md:sticky md:top-8">
                   <div style={{ 
                     background: 'var(--glass-bg)',
                     backdropFilter: 'var(--glass-backdrop)',
-                    padding: '2rem',
-                    borderRadius: 'var(--radius-xl)',
                     boxShadow: 'var(--shadow-medium)',
                     border: '1px solid var(--border-light)'
-                  }}>
+                  }} className="p-4 sm:p-6 md:p-8 rounded-xl">
                     <img 
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop"
                       alt="Dr. Vijay Baskar Reddy - Chairperson"
-                      style={{
-                        width: '220px',
-                        height: '220px',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                        margin: '0 auto 1.5rem',
-                        display: 'block',
-                        border: '4px solid var(--brand)'
-                      }}
+                      className="w-40 h-40 sm:w-52 sm:h-52 md:w-[220px] md:h-[220px] rounded-full object-cover mx-auto mb-6 block border-4 border-[var(--brand)]"
                     />
                     <h3 style={{ marginBottom: '0.5rem', color: 'var(--brand)', fontSize: '1.4em' }}>
                       Dr. Vijay Baskar Reddy
@@ -80,8 +70,8 @@ export default function AboutChairperson() {
                   </div>
                 </div>
                 
-                <div style={{ padding: '2rem' }}>
-                  <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '3rem', fontSize: '2.2em' }}>
+                <div className="p-4 sm:p-6 md:p-8">
+                  <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '3rem', fontSize: '2.2em' }} className="text-xl sm:text-2xl">
                     Chairperson's Message
                   </h2>
                   
@@ -89,48 +79,27 @@ export default function AboutChairperson() {
                     position: 'relative',
                     background: 'var(--glass-bg)',
                     backdropFilter: 'var(--glass-backdrop)',
-                    padding: '2.5rem',
-                    borderRadius: 'var(--radius-lg)',
                     boxShadow: 'var(--shadow-soft)',
-                    marginBottom: '2rem',
                     border: '1px solid var(--border-light)'
-                  }}>
-                    <div style={{
-                      position: 'absolute',
-                      top: '-15px',
-                      left: '2rem',
-                      fontSize: '3em',
-                      color: 'var(--brand)',
-                      opacity: '0.3'
-                    }}>
+                  }} className="p-4 sm:p-6 md:p-10 rounded-lg mb-6 md:mb-8">
+                    <div className="absolute -top-4 left-4 sm:left-8 text-2xl sm:text-3xl md:text-4xl text-[var(--brand)] opacity-30">
                       "
                     </div>
                     <blockquote style={{ 
                       fontStyle: 'italic', 
-                      fontSize: '1.3em', 
                       lineHeight: '1.6',
-                      marginBottom: '1.5rem',
-                      color: 'var(--text)',
-                      paddingLeft: '2rem'
-                    }}>
+                      color: 'var(--text)'
+                    }} className="text-base sm:text-lg md:text-xl mb-6 pl-4 sm:pl-8">
                       Education is the cornerstone of a progressive society. At Sanskrithi School of Business, 
                       we don't just impart knowledge; we shape character, build leadership, and foster innovation. 
                       Our mission is to create ethical business leaders who will drive positive change in the world.
                     </blockquote>
-                    <div style={{
-                      position: 'absolute',
-                      bottom: '-15px',
-                      right: '2rem',
-                      fontSize: '3em',
-                      color: 'var(--brand)',
-                      opacity: '0.3',
-                      transform: 'rotate(180deg)'
-                    }}>
+                    <div className="absolute -bottom-4 right-4 sm:right-8 text-2xl sm:text-3xl md:text-4xl text-[var(--brand)] opacity-30 rotate-180">
                       "
                     </div>
                   </div>
                   
-                  <div style={{ display: 'grid', gap: '2rem', marginBottom: '2rem' }}>
+                  <div className="grid gap-4 sm:gap-6 md:gap-8 mb-6 md:mb-8">
                     <p style={{ fontSize: '1.1em', lineHeight: '1.7', color: 'var(--text-primary)' }}>
                       When we established SSB Puttaparthi in 2008, our vision was clear: to create an institution 
                       that bridges the gap between academic excellence and industry relevance. Today, as I reflect 
@@ -145,11 +114,10 @@ export default function AboutChairperson() {
                     
                     <div style={{ 
                       background: 'var(--surface-1)', 
-                      padding: '2rem', 
                       borderRadius: 'var(--radius-lg)',
                       border: '1px solid var(--border-light)',
                       borderLeft: '4px solid var(--brand)'
-                    }}>
+                    }} className="p-4 sm:p-6 md:p-8">
                       <h4 style={{ color: 'var(--brand)', marginBottom: '1rem', fontSize: '1.2em' }}>
                         Our Commitment to Excellence
                       </h4>
@@ -191,11 +159,9 @@ export default function AboutChairperson() {
                   <div style={{ 
                     textAlign: 'right',
                     borderTop: '2px solid var(--brand)',
-                    paddingTop: '1.5rem',
-                    fontSize: '1.2em',
                     fontWeight: 'bold',
                     color: 'var(--brand)'
-                  }}>
+                  }} className="pt-4 sm:pt-6 text-base sm:text-lg md:text-xl">
                     Warm Regards,<br/>
                     <span style={{ fontSize: '1.1em' }}>Dr. Vijay Baskar Reddy</span><br/>
                     <span style={{ fontSize: '0.9em', color: 'var(--text-soft)' }}>Chairperson & Founder</span>
@@ -206,18 +172,15 @@ export default function AboutChairperson() {
 
             {/* Vision & Leadership Philosophy */}
             <div className="panel">
-              <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '2rem' }}>
+              <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '2rem' }} className="text-xl sm:text-2xl">
                 Leadership Philosophy
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                 <div style={{
                   background: 'var(--glass-bg)',
                   backdropFilter: 'var(--glass-backdrop)',
-                  border: '1px solid var(--border-light)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '2rem',
-                  textAlign: 'center'
-                }}>
+                  border: '1px solid var(--border-light)'
+                }} className="rounded-lg p-4 sm:p-6 text-center">
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>🎓</div>
                   <h3 style={{ color: 'var(--brand)', marginBottom: '1rem' }}>Academic Excellence</h3>
                   <p style={{ color: 'var(--text-soft)', lineHeight: '1.6' }}>
@@ -228,11 +191,8 @@ export default function AboutChairperson() {
                 <div style={{
                   background: 'var(--glass-bg)',
                   backdropFilter: 'var(--glass-backdrop)',
-                  border: '1px solid var(--border-light)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '2rem',
-                  textAlign: 'center'
-                }}>
+                  border: '1px solid var(--border-light)'
+                }} className="rounded-lg p-4 sm:p-6 text-center">
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>💼</div>
                   <h3 style={{ color: 'var(--brand)', marginBottom: '1rem' }}>Industry Connect</h3>
                   <p style={{ color: 'var(--text-soft)', lineHeight: '1.6' }}>
@@ -243,11 +203,8 @@ export default function AboutChairperson() {
                 <div style={{
                   background: 'var(--glass-bg)',
                   backdropFilter: 'var(--glass-backdrop)',
-                  border: '1px solid var(--border-light)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '2rem',
-                  textAlign: 'center'
-                }}>
+                  border: '1px solid var(--border-light)'
+                }} className="rounded-lg p-4 sm:p-6 text-center">
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>🌍</div>
                   <h3 style={{ color: 'var(--brand)', marginBottom: '1rem' }}>Global Perspective</h3>
                   <p style={{ color: 'var(--text-soft)', lineHeight: '1.6' }}>

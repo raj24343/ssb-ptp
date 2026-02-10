@@ -208,6 +208,7 @@ p { color: var(--text-primary); line-height: 1.7; margin-bottom: 0; }
   border:1px solid var(--border-light);
   box-shadow: var(--shadow-soft);
   border-radius: var(--radius-lg);
+  overflow-x: hidden;
 }
 @media (min-width:768px){ .panel{ padding:2.75rem; gap:3rem; } }
 @media (min-width:1024px){ .panel{ padding:3rem; gap:3.5rem; } }
