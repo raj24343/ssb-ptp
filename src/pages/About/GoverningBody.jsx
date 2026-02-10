@@ -242,7 +242,6 @@ export default function GoverningBody() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </div>
