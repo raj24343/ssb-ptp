@@ -247,10 +247,11 @@ export default function AboutOverview() {
               <div style={{ display: 'grid', gridTemplateColumns: '350px 1fr', gap: '4rem', alignItems: 'start' }}>
                 <div style={{ textAlign: 'center', position: 'sticky', top: '2rem' }}>
                   <div style={{ 
-                    background: 'white',
+                    background: 'var(--glass-bg)',
+                    backdropFilter: 'var(--glass-backdrop)',
                     padding: '2rem',
                     borderRadius: '16px',
-                    boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+                    boxShadow: 'var(--shadow-medium)',
                     border: '1px solid var(--border-light)'
                   }}>
                     <img 
@@ -288,10 +289,12 @@ export default function AboutOverview() {
                 <div style={{ padding: '2rem' }}>
                   <div style={{ 
                     position: 'relative',
-                    background: 'white',
+                    background: 'var(--glass-bg)',
+                    backdropFilter: 'var(--glass-backdrop)',
                     padding: '2.5rem',
                     borderRadius: '12px',
-                    boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
+                    boxShadow: 'var(--shadow-soft)',
+                    border: '1px solid var(--border-light)',
                     marginBottom: '2rem'
                   }}>
                     <div style={{
