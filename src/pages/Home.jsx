@@ -306,7 +306,6 @@ export default function Home() {
                     desc="24/7 access during exam weeks"
                     link="/campus-life/library"
                   />
-                 
                   <AnnouncementItem
                     title="Sports Meet Registration"
                     desc="Inter-college championships"
