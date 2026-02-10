@@ -1,9 +1,9 @@
 import React, { Suspense, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Link, Routes, Route, useLocation } from 'react-router-dom';
 import Footer from './components/Layout/Footer.jsx';
-import Sidebar from './components/Layout/Sidebar.jsx';
 import MobileNavigation from './components/Layout/MobileNavigation.jsx';
 import routes from './routes.jsx';
+import logoSrc from './assets/SSB LOGO 2023.png';
 
 // Scroll to top component
 function ScrollToTop() {
@@ -27,6 +27,10 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
+      {/* Logo - top left header */}
+      <Link to="/" className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50">
+        <img src={logoSrc} alt="SSB - Sanskrithi School of Business" className="h-10 sm:h-12 md:h-14 w-auto object-contain" />
+      </Link>
       <main className="flex-1 min-w-0 overflow-x-hidden">
         <Suspense fallback={
           <div className="flex items-center justify-center min-h-[50vh] p-16">
