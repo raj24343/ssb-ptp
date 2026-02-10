@@ -1,0 +1,121 @@
+:root {
+  /* ===== Professional College Brand Colors ===== */
+  --brand: #D94436;             /* Primary red */
+  --brand-light: #F27D72;       /* Light coral */
+  --brand-dark: #b8352a;
+
+  --accent: #344973;            /* Deep blue */
+  --accent-primary: #344973;
+  --accent-secondary: #5a6d94;
+
+  /* Professional Dark Theme Base */
+  --base: #0F1419;              /* Professional dark blue-gray */
+  --base-light: #1C2128;        /* Slightly lighter */
+  --base-medium: #161B22;       /* Medium tone */
+  --base-dark: #0A0E13;         /* Darker tone */
+
+  /* Refined Text System */
+  --text: #F6F8FA;              /* Clean white for headings */
+  --text-primary: #E6EDF3;      /* Primary body text */
+  --text-soft: #C9D1D9;         /* Secondary text */
+  --text-dim: #8B949E;          /* Tertiary text */
+  --text-muted: #6E7681;        /* Subtle/disabled text */
+
+  /* Professional Glass & Surfaces */
+  --surface-0: rgba(246,248,250,0.03);
+  --surface-1: rgba(246,248,250,0.06);
+  --surface-2: rgba(246,248,250,0.09);
+  --surface-3: rgba(246,248,250,0.12);
+  --surface-glass: rgba(246,248,250,0.08);
+
+  --glass-bg: rgba(246,248,250,0.08);
+  --glass-border: rgba(246,248,250,0.15);
+  --glass-backdrop: blur(16px) saturate(180%);
+
+  /* Professional Card System */
+  --card: 246 248 250 / 8%;
+  --card-strong: 246 248 250 / 12%;
+  --card-hover: 246 248 250 / 15%;
+
+  /* Professional Borders */
+  --border-light: rgba(246,248,250,0.12);
+  --border-medium: rgba(246,248,250,0.20);
+  --border-strong: rgba(246,248,250,0.30);
+
+  /* Professional Shadow System */
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
+  --shadow-medium: 0 8px 24px rgba(0,0,0,0.20), 0 4px 8px rgba(0,0,0,0.16);
+  --shadow-elev: 0 16px 48px rgba(0,0,0,0.28), 0 8px 16px rgba(0,0,0,0.20);
+  --shadow-glow: 0 0 0 1px rgba(217,68,54,0.20), 0 8px 32px rgba(52,73,115,0.15);
+
+  /* Consistent Border Radius */
+  --radius: 0.875rem;
+  --radius-sm: 0.625rem;
+  --radius-md: 1.125rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 2.5rem;
+
+  /* Smooth Transitions */
+  --transition-fast: 0.15s cubic-bezier(.2,.8,.2,1);
+  --transition-medium: 0.25s cubic-bezier(.2,.8,.2,1);
+  --transition-slow: 0.4s cubic-bezier(.2,.8,.2,1);
+
+  /* Layout */
+  --header-height: 80px;
+
+  /* Professional Background System */
+  --campus-gradient:
+    radial-gradient(1400px 800px at 50% 0%, rgba(52,73,115,0.06), transparent 70%),
+    radial-gradient(800px 600px at 100% 100%, rgba(217,68,54,0.04), transparent 60%),
+    linear-gradient(180deg, var(--base-dark) 0%, var(--base) 30%, var(--base-medium) 70%, var(--base) 100%);
+
+  /* Professional Gradients */
+  --brand-gradient: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+  --accent-gradient: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+  --surface-gradient: linear-gradient(135deg, var(--surface-1) 0%, var(--surface-2) 100%);
+
+  /* Z-index scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* ===== Optional Light Variant (toggle via .theme-light on <html>) ===== */
+.theme-light {
+  --base: #F2F2F2;
+  --base-light: #ffffff;
+  --base-medium: #e6e6e6;
+  --base-dark: #cccccc;
+
+  --text: #0D0D0D;
+  --text-primary: #1a1a1a;
+  --text-soft: #444444;
+  --text-dim: #666666;
+  --text-muted: #888888;
+
+  --surface-0: rgba(13, 13, 13, 0.03);
+  --surface-1: rgba(13, 13, 13, 0.06);
+  --surface-2: rgba(13, 13, 13, 0.08);
+  --surface-3: rgba(13, 13, 13, 0.12);
+
+  --glass-bg: rgba(242, 242, 242, 0.92);
+  --glass-border: rgba(13,13,13,0.12);
+
+  --border-light: rgba(13,13,13,0.08);
+  --border-medium: rgba(13,13,13,0.12);
+  --border-strong: rgba(13,13,13,0.16);
+
+  --campus-gradient:
+    radial-gradient(1200px 600px at 50% -10%, rgba(52,73,115,0.08), transparent 60%),
+    linear-gradient(135deg, #F2F2F2 0%, #ffffff 50%, #e6e6e6 100%);
+}
+
+@media (min-width: 768px) {
+  :root { --header-height: 88px; }
+}
