@@ -71,7 +71,7 @@ const HeroCarousel = () => {
               <div className="container mx-auto px-4 max-w-6xl">
                 <div className="text-white max-w-3xl">
                   {/* Badge */}
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 text-sm mb-6">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/20 border border-white/30 px-4 py-2 text-sm mb-6">
                     <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
                     {slide.badge}
                   </div>
@@ -102,7 +102,7 @@ const HeroCarousel = () => {
                     </a>
                     <a
                       href="/inquiry"
-                      className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-lg transition-all hover:bg-white/20"
+                      className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/15 border border-white/30 text-white font-semibold text-lg transition-all hover:bg-white/25"
                     >
                       Schedule Visit
                     </a>

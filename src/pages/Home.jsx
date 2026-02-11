@@ -30,16 +30,24 @@ import logoMphasis from "../assets/companylogos/mphasis-logo (1).png";
  */
 
 export default function Home() {
-  // simple reveal on scroll
+  // reveal on scroll - throttled for scroll performance
   useEffect(() => {
+    let ticking = false;
+    const el = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("reveal-visible");
-        }),
-      { threshold: 0.15 }
+      (entries) => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("reveal-visible");
+          });
+          ticking = false;
+        });
+      },
+      { threshold: 0.1, rootMargin: "50px" }
     );
-    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    el.forEach((node) => io.observe(node));
     return () => io.disconnect();
   }, []);
 
@@ -135,7 +143,7 @@ export default function Home() {
               {[...recruiters, ...recruiters].map((r, idx) => (
                 <div
                   key={r.name + idx}
-                  className="shrink-0 px-6 py-3 rounded-xl border border-[var(--border-light)] bg-white/95 backdrop-blur-[16px] flex items-center justify-center h-14"
+                  className="shrink-0 px-6 py-3 rounded-xl border border-[var(--border-light)] bg-white flex items-center justify-center h-14"
                 >
                   <img src={r.logo} alt={r.name} className="h-8 object-contain max-w-[120px]" />
                 </div>
@@ -154,7 +162,7 @@ export default function Home() {
               <a
                 key={p.title}
                 href={p.to}
-                className="group relative rounded-2xl overflow-hidden border border-[var(--border-light)] bg-[var(--glass-bg)] backdrop-blur-sm block hover:border-[var(--border-medium)] transition-colors duration-200"
+                className="group relative rounded-2xl overflow-hidden border border-[var(--border-light)] bg-[var(--surface-2)] block hover:border-[var(--border-medium)] transition-colors duration-200"
               >
                 <img
                   src={p.img}
@@ -261,7 +269,7 @@ export default function Home() {
             </a>
             <a
               href="/admissions/scholarships"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[var(--surface-2)] backdrop-blur-md border border-[var(--border-light)] text-[var(--text)] font-medium hover:bg-[var(--surface-3)] transition focus-ring"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[var(--surface-2)] border border-[var(--border-light)] text-[var(--text)] font-medium hover:bg-[var(--surface-3)] transition focus-ring"
             >
               Scholarships
             </a>
@@ -381,7 +389,7 @@ export default function Home() {
             <p className="text-[var(--text-muted)] mt-2 max-w-xl mx-auto">Visit our campus or reach out — we&apos;re here to help you take the next step.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            <div className="reveal group rounded-2xl overflow-hidden border border-[var(--border-light)] bg-[var(--glass-bg)] backdrop-blur-sm shadow-lg hover:shadow-xl hover:border-[var(--brand)]/30 transition-all duration-300">
+            <div className="reveal group rounded-2xl overflow-hidden border border-[var(--border-light)] bg-[var(--surface-2)] shadow-lg hover:shadow-xl hover:border-[var(--brand)]/30 transition-all duration-300">
               <div className="relative aspect-[16/9] overflow-hidden">
                 <img src={homeCampus} alt="Campus" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
@@ -402,7 +410,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="reveal group rounded-2xl border border-[var(--border-light)] bg-[var(--glass-bg)] backdrop-blur-sm p-6 sm:p-8 shadow-lg hover:shadow-xl hover:border-[var(--brand)]/30 transition-all duration-300 flex flex-col">
+            <div className="reveal group rounded-2xl border border-[var(--border-light)] bg-[var(--surface-2)] p-6 sm:p-8 shadow-lg hover:shadow-xl hover:border-[var(--brand)]/30 transition-all duration-300 flex flex-col">
               <div className="flex items-center gap-3 mb-3">
                 <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand)]/10 text-[var(--brand)]">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
@@ -443,7 +451,7 @@ function Header({ title, subtitle }) {
 
 function Card({ title, desc }) {
   return (
-    <div className="reveal group p-6 rounded-2xl border border-[var(--border-light)] bg-[var(--glass-bg)] hover:bg-[var(--surface-2)] hover:border-[var(--border-medium)] transition-colors duration-200">
+    <div className="reveal group p-6 rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)] hover:bg-[var(--surface-2)] hover:border-[var(--border-medium)] transition-colors duration-200">
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-xl font-semibold text-[var(--text)]">{title}</h3>
         <span className="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--surface-2)] border border-[var(--border-light)] text-[var(--text-soft)]">
@@ -467,7 +475,7 @@ function Card({ title, desc }) {
 
 function Testimonial({ quote, name, role, img }) {
   return (
-    <div className="reveal relative overflow-hidden rounded-2xl border border-[var(--border-light)] bg-[var(--glass-bg)] p-6">
+    <div className="reveal relative overflow-hidden rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)] p-6">
       <div className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-[var(--brand)]/8 pointer-events-none" />
       <div className="flex items-start gap-4">
         <img
@@ -488,7 +496,7 @@ function Testimonial({ quote, name, role, img }) {
 
 function Facility({ title, img, points }) {
   return (
-    <div className="reveal group relative overflow-hidden rounded-2xl border border-[var(--border-light)] bg-[var(--glass-bg)]">
+    <div className="reveal group relative overflow-hidden rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)]">
       <div className="aspect-[4/3] overflow-hidden">
         <img
           src={img}

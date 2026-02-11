@@ -463,23 +463,7 @@ export default function AboutOverview() {
                 >
                   Apply Now
                 </a>
-                <a 
-                  href="/inquiry" 
-                  style={{
-                    background: 'var(--surface-2)',
-                    color: 'var(--text)',
-                    padding: '0.875rem 2rem',
-                    borderRadius: 'var(--radius)',
-                    textDecoration: 'none',
-                    fontWeight: '600',
-                    border: '1px solid var(--border-light)',
-                    transition: 'all var(--transition-fast)',
-                    display: 'inline-block'
-                  }}
-                  className="hover:bg-[var(--surface-3)] hover:border-[var(--border-medium)]"
-                >
-                  Visit Campus
-                </a>
+                
               </div>
             </div>
           </div>

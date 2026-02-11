@@ -78,9 +78,9 @@ export const NAV = [
         description: 'Course fees and payment details'
       },
       { 
-        label: 'Online Fee Payment', 
+        label: 'Fee Payment', 
         href: '/admissions/fee-payment',
-        description: 'Online fee payment portal'
+        description: 'QR code payment and fee information'
       },
       { 
         label: 'Scholarships', 
