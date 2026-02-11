@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import home1 from '../../assets/home/20260202_121419.jpg';
+import home2 from '../../assets/home/20260202_121633.jpg';
+import home3 from '../../assets/home/20260202_122858.jpg';
+import logo from '../../assets/logo.png';
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,7 +13,7 @@ const HeroCarousel = () => {
       title: "Build a career that's",
       highlight: "future‑proof",
       subtitle: "Learn by doing, lead with insight. Sanskrithi School of Business blends timeless management with modern tech.",
-      image: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1920&auto=format&fit=crop",
+      image: home1,
       badge: "AI-Ready Business Education",
       stats: [
         { k: "15+", v: "Years of Excellence" },
@@ -21,14 +26,14 @@ const HeroCarousel = () => {
       title: "Shape the next generation of",
       highlight: "business leaders",
       subtitle: "Experience hands-on learning with industry partnerships, live projects, and cutting-edge technology integration.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1920&auto=format&fit=crop",
+      image: home2,
       badge: "Industry-Connected Learning"
     },
     {
       title: "Transform your potential into",
       highlight: "measurable success",
       subtitle: "Join our network of 1200+ alumni making impact across BFSI, Consulting, Technology, and Entrepreneurship sectors.",
-      image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920&auto=format&fit=crop",
+      image: home3,
       badge: "95% Placement Rate"
     }
   ];
@@ -47,6 +52,11 @@ const HeroCarousel = () => {
 
   return (
     <section className="hero-carousel">
+        {/* Sticky Logo - Top Left */}
+        <Link to="/" className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20 flex items-center">
+          <img src={logo} alt="SSB Logo" className="h-10 sm:h-12 md:h-14 w-auto object-contain drop-shadow-lg" style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3))' }} />
+        </Link>
+
         {/* Floating decorative elements */}
         <div className="floating-elements"></div>
 

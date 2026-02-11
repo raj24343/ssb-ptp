@@ -1,5 +1,21 @@
 import React, { useEffect, useRef } from "react";
 import HeroCarousel from "../components/ui/HeroCarousel.jsx";
+import progMba from "../assets/programes/11111.jpg";
+import progPgdm from "../assets/programes/22222.jpg";
+import progBba from "../assets/programes/33333.jpg";
+import homeCampus from "../assets/home/20260202_121419.jpg";
+import homeImg2 from "../assets/home/20260202_121633.jpg";
+import homeImg3 from "../assets/home/20260202_122858.jpg";
+import logoTCS from "../assets/companylogos/Tata_Consultancy_Services_Logo.svg.png";
+import logoDeloitte from "../assets/companylogos/Deloitte_Logo.png";
+import logoAccenture from "../assets/companylogos/Accenture.svg.png";
+import logoHDFC from "../assets/companylogos/HDFC_Bank_Logo.svg.png";
+import logoWipro from "../assets/companylogos/Wipro-logo.png";
+import logoIcici from "../assets/companylogos/icici.png";
+import logoAmazon from "../assets/companylogos/amazon.png";
+import logoYesBank from "../assets/companylogos/yes bank.png";
+import logoGenpact from "../assets/companylogos/800px-Genpact_logo.svg.png";
+import logoMphasis from "../assets/companylogos/mphasis-logo (1).png";
 
 /**
  * SSB — Sanskrithi School of Business
@@ -48,21 +64,21 @@ export default function Home() {
       title: "MBA Program",
       desc: "Master of Business Administration with multiple specializations and industry exposure.",
       chip: "2 Years Full-time",
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1400&auto=format&fit=crop",
+      img: progMba,
       to: "/academics/mba",
     },
     {
       title: "PGDM Program",
       desc: "Post Graduate Diploma in Management with practical business applications.",
       chip: "Industry Focused",
-      img: "https://images.unsplash.com/photo-1529078155058-5d716f45d604?q=80&w=1400&auto=format&fit=crop",
+      img: progPgdm,
       to: "/academics/pgdm",
     },
     {
       title: "BBA Program",
       desc: "Bachelor of Business Administration building foundational business knowledge.",
       chip: "3 Years Full-time",
-      img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1400&auto=format&fit=crop",
+      img: progBba,
       to: "/academics/bba",
     },
   ];
@@ -87,18 +103,16 @@ export default function Home() {
   ];
 
   const recruiters = [
-    "TCS",
-    "Deloitte",
-    "Accenture",
-    "KPMG",
-    "HDFC",
-    "HCL",
-    "Wipro",
-    "ICICI",
-    "Infosys",
-    "Tech Mahindra",
-    "Amazon",
-    "Cognizant",
+    { name: "TCS", logo: logoTCS },
+    { name: "Deloitte", logo: logoDeloitte },
+    { name: "Accenture", logo: logoAccenture },
+    { name: "HDFC Bank", logo: logoHDFC },
+    { name: "Wipro", logo: logoWipro },
+    { name: "ICICI Bank", logo: logoIcici },
+    { name: "Amazon", logo: logoAmazon },
+    { name: "Yes Bank", logo: logoYesBank },
+    { name: "Genpact", logo: logoGenpact },
+    { name: "Mphasis", logo: logoMphasis },
   ];
 
   return (
@@ -120,10 +134,10 @@ export default function Home() {
             <div className="marquee" ref={marqueeRef}>
               {[...recruiters, ...recruiters].map((r, idx) => (
                 <div
-                  key={r + idx}
-                  className="shrink-0 px-6 py-3 rounded-xl border border-[var(--border-light)] bg-[var(--glass-bg)] backdrop-blur-[16px] text-[var(--text-soft)] font-medium"
+                  key={r.name + idx}
+                  className="shrink-0 px-6 py-3 rounded-xl border border-[var(--border-light)] bg-white/95 backdrop-blur-[16px] flex items-center justify-center h-14"
                 >
-                  {r}
+                  <img src={r.logo} alt={r.name} className="h-8 object-contain max-w-[120px]" />
                 </div>
               ))}
             </div>
@@ -184,15 +198,15 @@ export default function Home() {
           {/* testimonial row */}
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             <Testimonial
-              quote="The live projects made all the difference. I had 2 offers before graduation."
-              name="Harini, MBA 2024"
-              role="Business Analyst @ Deloitte"
+              quote="SSB's industry-focused curriculum and practical exposure prepared me for the consulting world. The mentorship and live projects made all the difference."
+              name="Chellam Gowthami"
+              role="Accenture, 2021-2023"
               img="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop"
             />
             <Testimonial
-              quote="Practical learning + strong mentor network = smooth transition into product."
-              name="Vikram, PGDM 2023"
-              role="Product Associate @ HDFC"
+              quote="The analytical thinking and business fundamentals from SSB helped me excel in e-commerce. Strong foundation for a career in analytics and operations."
+              name="Kuruba Sainath"
+              role="Catalogue Analyst, Amazon, 2017-2019"
               img="https://images.unsplash.com/photo-1614850715731-3d4377f1f70b?q=80&w=800&auto=format&fit=crop"
             />
           </div>
@@ -206,17 +220,17 @@ export default function Home() {
           <div className="mt-8 grid lg:grid-cols-3 gap-6">
             <Facility
               title="Library & Research"
-              img="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1400&auto=format&fit=crop"
+              img={homeCampus}
               points={["Digital journals", "Quiet pods", "Late hours"]}
             />
             <Facility
               title="Technology Labs"
-              img="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1400&auto=format&fit=crop"
+              img={homeImg2}
               points={["Analytics suites", "AI sandbox", "Prototyping"]}
             />
             <Facility
               title="Residential & Sports"
-              img="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1400&auto=format&fit=crop"
+              img={homeImg3}
               points={[
                 "On-campus hostels",
                 "Ground & courts",
@@ -360,43 +374,47 @@ export default function Home() {
       </section>
 
       {/* Contact Teaser */}
-      <section id="contact" className="py-16 md:py-24">
+      <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-transparent via-[var(--surface-1)]/30 to-transparent">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-6 items-stretch">
-            <div className="reveal rounded-2xl border border-[var(--border-light)] bg-[var(--glass-bg)] p-6">
-              <h3 className="text-2xl font-semibold text-[var(--text)]">Visit Us</h3>
-              <p className="text-[var(--text-soft)] mt-1">
-                Book a guided campus tour and interact with faculty.
-              </p>
-              <div className="mt-4 aspect-[4/3] overflow-hidden rounded-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1600&auto=format&fit=crop"
-                  alt="Campus map"
-                  className="w-full h-full object-cover"
-                />
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text)]">Get in Touch</h2>
+            <p className="text-[var(--text-muted)] mt-2 max-w-xl mx-auto">Visit our campus or reach out — we&apos;re here to help you take the next step.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            <div className="reveal group rounded-2xl overflow-hidden border border-[var(--border-light)] bg-[var(--glass-bg)] backdrop-blur-sm shadow-lg hover:shadow-xl hover:border-[var(--brand)]/30 transition-all duration-300">
+              <div className="relative aspect-[16/9] overflow-hidden">
+                <img src={homeCampus} alt="Campus" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               </div>
-              <a
-                href="/inquiry"
-                className="mt-4 inline-block px-5 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-medium hover:scale-105 hover:shadow-xl transition focus-ring"
-              >
-                Schedule a Visit
-              </a>
+              <div className="p-6 sm:p-8">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand)]/10 text-[var(--brand)]">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-[var(--text)]">Visit Us</h3>
+                </div>
+                <p className="text-[var(--text-soft)] leading-relaxed">
+                  Book a guided campus tour and interact with faculty. Experience our facilities firsthand.
+                </p>
+                <a href="/inquiry" className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold hover:scale-105 hover:shadow-xl transition-all focus-ring">
+                  Schedule a Visit
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h12.17l-4.58-4.59L13 6l7 7-7 7-1.41-1.41L17.17 13H5z"/></svg>
+                </a>
+              </div>
             </div>
-            <div className="reveal rounded-2xl border border-[var(--border-light)] bg-[var(--glass-bg)] p-6">
-              <h3 className="text-2xl font-semibold text-[var(--text)]">
-                Ask Admissions
-              </h3>
-              <p className="text-[var(--text-soft)] mt-1">
-                We usually respond within 24 hours on working days.
+            <div className="reveal group rounded-2xl border border-[var(--border-light)] bg-[var(--glass-bg)] backdrop-blur-sm p-6 sm:p-8 shadow-lg hover:shadow-xl hover:border-[var(--brand)]/30 transition-all duration-300 flex flex-col">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand)]/10 text-[var(--brand)]">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                </span>
+                <h3 className="text-xl sm:text-2xl font-semibold text-[var(--text)]">Ask Admissions</h3>
+              </div>
+              <p className="text-[var(--text-soft)] leading-relaxed flex-1">
+                We usually respond within 24 hours on working days. Submit your inquiry using our form — admission, schedule visit, or general contact.
               </p>
-              <p className="mt-4 text-[var(--text-soft)]">
-                Submit your inquiry using our form. All inquiries — admission, schedule visit, contact — use the same form.
-              </p>
-              <a
-                href="/inquiry"
-                className="mt-4 inline-block px-5 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold hover:scale-105 hover:shadow-xl transition focus-ring"
-              >
+              <a href="/inquiry" className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold hover:scale-105 hover:shadow-xl transition-all focus-ring w-fit">
                 Send Inquiry
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h12.17l-4.58-4.59L13 6l7 7-7 7-1.41-1.41L17.17 13H5z"/></svg>
               </a>
             </div>
           </div>

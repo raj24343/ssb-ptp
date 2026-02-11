@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
 import Card from '../../components/ui/Card';
+import logoTCS from '../../assets/companylogos/Tata_Consultancy_Services_Logo.svg.png';
+import logoDeloitte from '../../assets/companylogos/Deloitte_Logo.png';
+import logoAccenture from '../../assets/companylogos/Accenture.svg.png';
+import logoHDFC from '../../assets/companylogos/HDFC_Bank_Logo.svg.png';
+import logoWipro from '../../assets/companylogos/Wipro-logo.png';
+import logoIcici from '../../assets/companylogos/icici.png';
+import logoAmazon from '../../assets/companylogos/amazon.png';
+import logoGenpact from '../../assets/companylogos/800px-Genpact_logo.svg.png';
 
 export default function Courses() {
   const [selectedProgram, setSelectedProgram] = useState('mba');
@@ -165,14 +173,14 @@ export default function Courses() {
   };
 
   const industryConnections = [
-    { company: "TCS", type: "Placement Partner", logo: "🏢" },
-    { company: "Infosys", type: "Training Partner", logo: "💼" },
-    { company: "HDFC Bank", type: "Internship Partner", logo: "🏦" },
-    { company: "Reliance", type: "Project Partner", logo: "🏭" },
-    { company: "Wipro", type: "Recruitment Partner", logo: "💻" },
-    { company: "ICICI Bank", type: "Training Partner", logo: "🏛️" },
-    { company: "Amazon", type: "Project Partner", logo: "📦" },
-    { company: "Deloitte", type: "Consulting Partner", logo: "🎯" }
+    { company: "TCS", type: "Placement Partner", logo: logoTCS },
+    { company: "Genpact", type: "Training Partner", logo: logoGenpact },
+    { company: "HDFC Bank", type: "Internship Partner", logo: logoHDFC },
+    { company: "Wipro", type: "Project Partner", logo: logoWipro },
+    { company: "ICICI Bank", type: "Recruitment Partner", logo: logoIcici },
+    { company: "Amazon", type: "Training Partner", logo: logoAmazon },
+    { company: "Deloitte", type: "Consulting Partner", logo: logoDeloitte },
+    { company: "Accenture", type: "Project Partner", logo: logoAccenture }
   ];
 
   return (
@@ -376,8 +384,8 @@ export default function Courses() {
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
                 {industryConnections.map((partner, i) => (
                   <div key={i} className="text-center p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
-                    <div className="w-16 h-16 rounded-full bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">{partner.logo}</span>
+                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-4 p-2 overflow-hidden">
+                      <img src={partner.logo} alt={partner.company} className="w-full h-full object-contain" />
                     </div>
                     <h4 className="font-semibold text-[var(--text)] mb-2">{partner.company}</h4>
                     <p className="text-sm text-[var(--text-soft)]">{partner.type}</p>

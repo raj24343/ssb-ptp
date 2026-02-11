@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CreditCard, Building2, BookOpen, Shield, ArrowRight, CheckCircle2 } from 'lucide-react';
 import SectionHeader from '../../components/ui/SectionHeader';
+import paymentQR from '../../assets/paymentqr.jpg';
 
 export default function FeePayment() {
   const [formData, setFormData] = useState({
@@ -203,8 +204,18 @@ export default function FeePayment() {
                 }}
               >
                 <h3 className="font-bold text-[var(--text)] mb-4 flex items-center gap-2">
+                  <CreditCard className="w-5 h-5 text-[var(--brand)]" />
+                  Scan to Pay (UPI / QR)
+                </h3>
+                <div className="mb-4 p-4 bg-white rounded-xl inline-block border border-[var(--border-light)]">
+                  <img src={paymentQR} alt="Payment QR Code" className="w-40 h-40 sm:w-48 sm:h-48 object-contain" />
+                </div>
+                <p className="text-sm text-[var(--text-soft)] mb-4">
+                  Scan the QR code with any UPI app (GPay, PhonePe, Paytm) to pay fees.
+                </p>
+                <h3 className="font-bold text-[var(--text)] mb-4 mt-6 flex items-center gap-2">
                   <BookOpen className="w-5 h-5 text-[var(--brand)]" />
-                  Payment Methods
+                  Other Payment Methods
                 </h3>
                 <ul className="space-y-3 text-sm text-[var(--text-soft)]">
                   <li className="flex items-center gap-2">
